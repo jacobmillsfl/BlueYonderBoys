@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-smoke font-body antialiased;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero illustration: rounded frame + soft dissolve into page background */
+.hero-art {
+  @apply relative w-full overflow-hidden rounded-2xl md:rounded-3xl;
+  box-shadow:
+    0 0 0 1px rgba(142, 197, 240, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 64px rgba(61, 110, 168, 0.2);
+}
+
+.hero-art img {
+  @apply block h-auto w-full;
+}
+
+/* Logo centered over the hero band illustration */
+.hero-stack {
+  @apply relative;
+}
+
+.hero-stack .hero-photo {
+  @apply relative z-0 block h-auto w-full;
+}
+
+.hero-stack .hero-logo-overlay {
+  @apply pointer-events-none absolute inset-0 z-[3] m-0 flex items-center justify-center;
+}
+
+@keyframes hero-logo-fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.92;
+  }
+}
+
+.hero-stack .hero-logo-overlay img {
+  @apply h-auto w-[88%] max-w-full;
+  mix-blend-mode: screen;
+  animation: hero-logo-fade 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-stack .hero-logo-overlay img {
+    animation: none;
+    opacity: 0.78;
+  }
+}
+
+.hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 48px rgba(6, 10, 20, 0.35);
+}
+
+.hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 58%,
+      rgba(6, 10, 20, 0.45) 82%,
+      #060a14 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(6, 10, 20, 0.65) 0%,
+      transparent 14%,
+      transparent 86%,
+      rgba(6, 10, 20, 0.65) 100%
+    );
+}

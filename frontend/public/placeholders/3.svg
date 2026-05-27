@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Placeholder band photo">
+  <defs>
+    <linearGradient id="g3" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#243b5c"/>
+      <stop offset="100%" stop-color="#060a14"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#g3)"/>
+  <path d="M100 350 L200 120 L300 350 Z" fill="none" stroke="#3d6ea8" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="120" x2="200" y2="360" stroke="#8ec5f0" stroke-width="1.5" opacity="0.35"/>
+  <text x="200" y="440" text-anchor="middle" fill="#94a8be" font-family="Georgia, serif" font-size="14">Spanish guitar</text>
+</svg>

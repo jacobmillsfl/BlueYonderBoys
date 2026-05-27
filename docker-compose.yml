@@ -1,0 +1,31 @@
+# SQLite and uploads persist on the host under ./backend/database/
+# Do not run `docker compose down -v` without a backup.
+
+services:
+  backend:
+    container_name: byb-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_DIR: /app/database
+    volumes:
+      - ./backend/database:/app/database
+    ports:
+      - "8002:8000"
+
+  frontend:
+    container_name: byb-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ""
+    restart: unless-stopped
+    ports:
+      - "8082:80"
+    depends_on:
+      - backend

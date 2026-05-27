@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Placeholder band photo">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#060a14"/>
+      <stop offset="50%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#060a14"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#g5)"/>
+  <rect x="60" y="280" width="280" height="8" rx="4" fill="#8ec5f0" opacity="0.25"/>
+  <circle cx="200" cy="200" r="50" fill="#3d6ea8" opacity="0.3"/>
+  <text x="200" y="440" text-anchor="middle" fill="#94a8be" font-family="Georgia, serif" font-size="14">On stage</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Placeholder band photo">
+  <defs>
+    <linearGradient id="g6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a5080"/>
+      <stop offset="100%" stop-color="#0c1528"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#g6)"/>
+  <text x="200" y="240" text-anchor="middle" fill="#c5ddf5" font-family="Georgia, serif" font-size="22" opacity="0.9">Blue Yonder</text>
+  <text x="200" y="270" text-anchor="middle" fill="#8ec5f0" font-family="Georgia, serif" font-size="18" opacity="0.8">Boys</text>
+  <text x="200" y="440" text-anchor="middle" fill="#94a8be" font-family="Georgia, serif" font-size="14">Photo coming soon</text>
+</svg>
